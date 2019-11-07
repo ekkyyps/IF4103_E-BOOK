@@ -3,6 +3,15 @@
 <head>
 	<title>PERPUS</title>
 	<link rel="shortcut icon" href="<?php echo base_url('assets/img/logo.png') ?>">
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 	<style type="text/css">
 		.container {
 			background: url(perpus.jpg);
@@ -36,7 +45,9 @@
 </head>
 <body>
 	<div class="navbar">
-		<img src="assets/img/logo.png" style="width: 20%">
+		<a href="<?php echo base_url('index.php/Home') ?>">
+			<img src="<?php echo base_url('assets/img/logo.png') ?>"  style="width: 20%">
+		</a>
 		<div class="search" style="float: right; padding-top: 3vw;">
             <input type="text" placeholder="Search Keywords" name="keyword" style="border-style: solid; border-radius: 30px; color: #303030; "> 
             <button type="submit" style="background-color: white; height: 25px; width: 30px; border-radius: 10px;">

@@ -11,9 +11,17 @@
 			margin-left: 5vw;
 			background-color: #008CBA;
 			border-radius: 30px;
-			width: 30%;
+			width: 50%;
 			height: 70px;
 			color: black;
+		}
+		.bagian1 .form1 .b1  {
+			float: left;
+			width: 40%;
+		}
+		.bagian1 .form2 .b1  {
+			float: right;
+			width: 40%;
 		}
 		.bagian2 .ketik {
 			width: 60%;
@@ -40,20 +48,29 @@
 		<div class="bagian1" style="width: 70%">
 			<h1>WELCOME TO e-BOOK!</h1>
 			<h3>most-completed books platform in the world</h3>
-			<button class="b1">Mulai Membaca </button>
-			<form action="<?php echo base_url('Home/tulis')?>">
+			<form class="form1" action="<?php echo base_url('index.php/Home/regbaca')?>">
+				<button class="b1">Mulai Membaca </button>
+			</form>
+			<form class="form2" action="<?php echo base_url('index.php/Home/regtulis')?>">
 				<button class="b1">Mulai menulis</button>
 			</form>
 		</div>
 		<div class="bagian2" style="width: 30%">
-			<h2>LOGIN ADMIN</h2>
-			<form action="<?php echo base_url('Home/login_admin')?>">
-				<button class="b2">Admin</button>
+			<h2>LOGIN WITH</h2>
+			<form action="">
+				<button class="b2">Google</button>
 			</form> <br>
-			<h3 style="padding-left: 8vw;">OR</h3>
-			<input type="text" placeholder="username" name="username" class="ketik"><br>
-			<input type="text" placeholder="email" name="email" class="ketik"><br>
-			<br><br>
-			<button class="b1">Log In </button>
+			<h3>OR</h3>
+			<div class="form-login">
+				<form action="<?php echo base_url('index.php/Home/login')?>" action="GET"  method="post" >
+					<div class="form-group">
+						<input type="text" class="form-control" name="username"  placeholder="username" class="ketik"><br>
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control" name="password" placeholder="password" class="ketik"><br>
+					</div>
+					<input type="submit" class="btn btn-block btn-custom-green" value="LOGIN"  style="background-color:green; color: white;">
+				</form>
+			</div>
 		</div>
 	</div>
