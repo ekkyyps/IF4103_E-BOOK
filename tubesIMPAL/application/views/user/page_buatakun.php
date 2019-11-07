@@ -1,6 +1,5 @@
 <style type="text/css">
 		.container {
-			background: url(assets/img/perpus.jpg);
 			text-align: center;
 		}
 		.container .ketik {
@@ -32,7 +31,7 @@
 		<h1>Let's Join e-Book!</h1>
 		<h3 style="color: grey">start your journey now</h3>
 	</div>
-	<div class="container" >
+	<div class="container" style="background: url(<?=base_url('assets/img/perpus.jpg')?> )">
 		<div class="input">
 			<br><br>
 			<input type="text" placeholder="username" name="username" class="ketik"><br>

@@ -12,7 +12,7 @@ class Home extends CI_Controller {
 		$this->load->view('user/page_index');
 	}
 
-	public function login_admin() {
+	public function admin() {
 		$this->load->view('user/page_header');
 		$this->load->view('user/page_logAdm');
 	}
