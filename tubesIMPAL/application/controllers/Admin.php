@@ -16,18 +16,19 @@ class Admin extends CI_Controller {
 
     public function index()
     {
+        $databuku = $this->M_Admin->getAllBuku();
         $this->load->view('admin/page_headerAdm');
-        // $this->load->view('admin/page_homeAdm');
+        $this->load->view('admin/page_homeAdm',['data'=>$databuku]);
     }
 
     public function login() 
     {
-        $usernameA= $this->input->post("usernameA");
+        $no_pegawai= $this->input->post("no_pegawai");
         $passwordA = $this->input->post("passwordA");
-        $cek = $this->M_Admin->ceklogin($usernameA, $passwordA);
+        $cek = $this->M_Admin->ceklogin($no_pegawai, $passwordA);
         if ($cek > 0) {
             $data_session = array(
-                'nama' => $usernameA,
+                'no_pegawai' => $no_pegawai,
                 'status' => "login"
             );
             $this->session->set_userdata($data_session);
@@ -51,5 +52,27 @@ class Admin extends CI_Controller {
         //     </script>';
         $this->load->view('user/page_header');
         $this->load->view('user/page_logAdm');
+    }
+
+    public function tambahbuku()    {
+        $this->form_validation->set_rules('ISBN','ISBN','required');
+        if($this->form_validation->run() == FALSE) {
+            $this->load->view('Admin/page_headerAdm');
+            $this->load->view('Admin/page_tambahBuku');
+        } else {
+            $this->M_Admin->tambahDataBuku();
+            redirect('index.php/Admin');
+        }
+    }
+
+    public function editbuku($ISBN) {
+        $this->form_validation->set_rules('ISBN','ISBN','true');
+        if($this->form_validation->run() == FALSE) {
+            $this->load->view('Admin/page_headerAdm');
+            $this->load->view('Admin/page_editBuku',['data'=>$ISBN]);
+        } else {
+            $this->M_Admin->editBuku($ISBN);
+            redirect('index.php/Admin');
+        }
     }
 }

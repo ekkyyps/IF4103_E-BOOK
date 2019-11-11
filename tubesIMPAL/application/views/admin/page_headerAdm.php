@@ -66,7 +66,7 @@
     </ul>
     <ul class="nav navbar-nav navbar-right text-center">
       <li class="dropdown pull-right">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span><?php echo $this->session->userdata("nama"); ?>
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span><?php echo $this->session->userdata("no_pegawai"); ?>
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="#"></a></li>

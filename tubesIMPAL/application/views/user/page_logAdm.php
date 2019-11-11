@@ -7,7 +7,7 @@
 			<form action="<?php echo base_url('index.php/Admin/login'); ?>" action="GET"  method="post" style="background-color:gainsboro">       
                 <h3 class="text-center title-login">Login Admin</h3>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="usernameA" placeholder="username">
+                        <input type="text" class="form-control" name="no_pegawai" placeholder="No Pegawai">
                     </div>
 
                     <div class="form-group">

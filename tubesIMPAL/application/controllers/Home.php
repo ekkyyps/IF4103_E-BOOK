@@ -19,7 +19,7 @@ class Home extends CI_Controller {
 	}
 
 	public function login() {
-		$username= $this->input->post("username");
+		$username = $this->input->post("username");
         $password = $this->input->post("password");
         $cek = $this->M_Home->ceklogin($username, $password);
         if ($cek > 0) {

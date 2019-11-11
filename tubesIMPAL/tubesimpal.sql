@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 07 Nov 2019 pada 16.56
+-- Generation Time: 11 Nov 2019 pada 15.54
 -- Versi Server: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -29,18 +29,40 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admin` (
-  `usernameA` varchar(20) NOT NULL,
-  `passwordA` varchar(20) NOT NULL
+  `no_pegawai` int(20) NOT NULL,
+  `usernameA` varchar(20) DEFAULT NULL,
+  `passwordA` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `admin`
 --
 
-INSERT INTO `admin` (`usernameA`, `passwordA`) VALUES
-('ricky', '123'),
-('ekky', '123'),
-('rayhan', '123');
+INSERT INTO `admin` (`no_pegawai`, `usernameA`, `passwordA`) VALUES
+(1301174125, 'Alvianda Ricky', '123');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `buku`
+--
+
+CREATE TABLE `buku` (
+  `ISBN` int(20) NOT NULL,
+  `judul` varchar(30) DEFAULT NULL,
+  `penerbit` varchar(30) DEFAULT NULL,
+  `penulis` varchar(30) DEFAULT NULL,
+  `isi` varchar(1000) DEFAULT NULL,
+  `no_pegawai` int(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `buku`
+--
+
+INSERT INTO `buku` (`ISBN`, `judul`, `penerbit`, `penulis`, `isi`, `no_pegawai`) VALUES
+(1, 'Ricky Hebat ', 'MANTAB FIX', 'MANTAB2 ', 'BERHASIL', 1301174125),
+(2, 'Ricky Hebat ', 'Gramedia ', 'sfsknf', 'asd', 1301174125);
 
 -- --------------------------------------------------------
 
@@ -83,6 +105,33 @@ CREATE TABLE `penulis` (
 
 INSERT INTO `penulis` (`uname`, `email`, `pass`, `tgl_lahir`, `keterangan`) VALUES
 ('penulis1', 'penulis@gmail.com', '123', '6 Juni 1999', 'penulis');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`no_pegawai`);
+
+--
+-- Indexes for table `buku`
+--
+ALTER TABLE `buku`
+  ADD PRIMARY KEY (`ISBN`),
+  ADD KEY `no_pegawai` (`no_pegawai`);
+
+--
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+--
+
+--
+-- Ketidakleluasaan untuk tabel `buku`
+--
+ALTER TABLE `buku`
+  ADD CONSTRAINT `buku_ibfk_1` FOREIGN KEY (`no_pegawai`) REFERENCES `admin` (`no_pegawai`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
