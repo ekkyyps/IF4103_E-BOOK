@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 11 Nov 2019 pada 15.54
+-- Generation Time: 22 Nov 2019 pada 15.39
 -- Versi Server: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -39,6 +39,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`no_pegawai`, `usernameA`, `passwordA`) VALUES
+(1301174038, 'Ekkyyps', '123'),
+(1301174061, 'RayhanF', '123'),
 (1301174125, 'Alvianda Ricky', '123');
 
 -- --------------------------------------------------------
@@ -61,8 +63,8 @@ CREATE TABLE `buku` (
 --
 
 INSERT INTO `buku` (`ISBN`, `judul`, `penerbit`, `penulis`, `isi`, `no_pegawai`) VALUES
-(1, 'Ricky Hebat ', 'MANTAB FIX', 'MANTAB2 ', 'BERHASIL', 1301174125),
-(2, 'Ricky Hebat ', 'Gramedia ', 'sfsknf', 'asd', 1301174125);
+(1, 'Ricky Hebat ', 'Sangat', 'Hebat', 'aosdk', 1301174125),
+(7777, 'Soe Hok Gie', 'Gramedia', 'Soe Hok Gie', 'CERITA HIDUP SOE HOK GIE', 1301174038);
 
 -- --------------------------------------------------------
 

@@ -43,5 +43,11 @@ class M_Admin extends CI_Model
         $this->db->update('buku',$data);
     }
 
+    public function hapusBuku($ISBN) {
+        $this->db->where('ISBN',$ISBN); 
+        $this->db->delete('buku');
+        return;
+    }
+
     
 }

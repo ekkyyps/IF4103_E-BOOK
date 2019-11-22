@@ -75,4 +75,15 @@ class Admin extends CI_Controller {
             redirect('index.php/Admin');
         }
     }
+
+    public function hapusBuku() {
+        $databuku = $this->M_Admin->getAllBuku();
+        $this->load->view('Admin/page_headerAdm');
+        $this->load->view('Admin/page_hapusBuku',['data'=>$databuku]);
+    }
+
+    public function hpsBUKU($ISBN) {
+        $this->M_Admin->hapusBuku($ISBN);
+        redirect('index.php/Admin/hapusBuku','refresh');
+    }
 }

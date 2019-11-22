@@ -4,10 +4,10 @@
         <a href="<?= base_url(); ?>index.php/Admin/tambahbuku" class="btn btn-primary">TAMBAH</a>
       </div>
       <div class="col-md-3">
-        <a href="<?= base_url(); ?>Admin/tambahkota" class="btn btn-primary" data-toggle="modal" data-target="#edit">EDIT</a>
+        <a href="" class="btn btn-primary" data-toggle="modal" data-target="#edit">EDIT</a>
       </div>
       <div class="col-md-3">
-        <a href="<?= base_url(); ?>Admin/tambahkota" class="btn btn-primary">HAPUS</a>
+        <a href="<?= base_url(); ?>index.php/Admin/hapusBuku" class="btn btn-primary">HAPUS</a> 
       </div>
       <div class="col-md-3">
         <a href="<?= base_url(); ?>Admin/tambahkota" class="btn btn-primary">UNGGAH</a>
@@ -22,7 +22,7 @@
     			<th>Judul Buku</th>
     			<th>Penerbit</th>
     			<th>Penulis</th>
-          <th>Hapus</th>
+          <th>Admin Pengunggah</th>
     		</tr>
     	</thead>
     	<tbody>
@@ -34,8 +34,7 @@
 		            <td><?php echo $d->judul ?></td>
 		            <td><?php echo $d->penerbit ?></td>
 		            <td><?php echo $d->penulis ?></td>
-		            <!-- BUTTON HAPUS BUKU -->
-		            <td><a href="<?php echo site_url("Admin/hapuskota/" . $d->ISBN);?>" class="btn btn-danger" onclick="return confirm('Delete content?');">Delete</a></td>
+                <td><?php echo $d->no_pegawai?></td>
 	        	</form>
     		</tr>
     		<?php }?>
