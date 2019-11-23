@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>PERPUS</title>
+	<title>e-BOOK</title>
 	<link rel="shortcut icon" href="<?php echo base_url('assets/img/logo.png') ?>">
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 
 	<style type="text/css">
 		.container {
@@ -40,6 +42,7 @@
 			width: 10%;
 			height: 40px;
 		}
+
 	</style>
 
 </head>
@@ -48,12 +51,12 @@
 		<a href="<?php echo base_url('index.php/Home') ?>">
 			<img src="<?php echo base_url('assets/img/logo.png') ?>"  style="width: 20%">
 		</a>
-		<div class="search" style="float: right; padding-top: 3vw;">
+		<!-- <div class="search" style="float: right; padding-top: 3vw;">
             <input type="text" placeholder="Search Keywords" name="keyword" style="border-style: solid; border-radius: 30px; color: #303030; "> 
-            <button type="submit" style="background-color: white; height: 25px; width: 30px; border-radius: 10px;">
-            	<i class="fa fa-search" style="color: #e60000; height: 100%; margin-right:6px;"> </i>
+            <button type="submit" style="background-color: white; height: 25px; width: 30px; border-radius: 5px;">
+            	<i class="fa fa-search" style="height: 100%; margin-right:6px;"> </i>
             </button>
-        </div>
+        </div> -->
 	</div>
 
 

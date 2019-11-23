@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row">
-      <div class="col-md-3">
+      <!-- <div class="col-md-3">
         <a href="<?= base_url(); ?>index.php/Admin/tambahbuku" class="btn btn-primary">TAMBAH</a>
       </div>
       <div class="col-md-3">
@@ -8,13 +8,13 @@
       </div>
       <div class="col-md-3">
         <a href="<?= base_url(); ?>index.php/Admin/hapusBuku" class="btn btn-primary">HAPUS</a> 
-      </div>
-      <div class="col-md-3">
+      </div> -->
+      <div class="align-self-end ml-auto" style="float: right; align-self: center; ">
         <a href="<?= base_url(); ?>Admin/tambahkota" class="btn btn-primary">UNGGAH</a>
       </div>
     </div>
 
-    <table class="table table-bordered" id="table">
+    <table class="table table-bordered" id="table" >
     	<thead>
     		<tr>
     			<th>No</th>

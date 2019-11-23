@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>PERPUS ADMIN</title>
+  <title>ADMIN</title>
   <link rel="shortcut icon" href="<?php echo base_url('assets/img/logo.png') ?>">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -60,9 +60,9 @@
 		</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="<?php echo base_url('Admin/listkota....') ?>">???1</a></li>
-      <li><a href="<?php echo base_url('Admin/....listkirim') ?>">???2</a></li>
-      <li><a href="<?php echo base_url('Admin/.....listlokasi') ?>">???3</a></li>
+      <li><a href="<?php echo base_url('Admin/listkota....') ?>">TAMBAH</a></li>
+      <li><a href="<?php echo base_url('Admin/....listkirim') ?>">EDIT</a></li>
+      <li><a href="<?php echo base_url('Admin/.....listlokasi') ?>">HAPUS</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right text-center">
       <li class="dropdown pull-right">
