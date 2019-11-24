@@ -7,6 +7,7 @@
                 <th>Judul Buku</th>
                 <th>Penerbit</th>
                 <th>Penulis</th>
+                <th>Jenis</th>
                 <th>Hapus</th>
             </tr>
         </thead>
@@ -19,6 +20,7 @@
                     <td><?php echo $d->judul ?></td>
                     <td><?php echo $d->penerbit ?></td>
                     <td><?php echo $d->penulis ?></td>
+                    <td><?php echo $d->jenis ?></td>
                     <td><a href="<?php echo site_url("index.php/Admin/hpsBUKU/". $d->ISBN);?>" class="btn btn-danger" onclick="return confirm('Delete content?');">Delete</a></td>
                 </form>
             </tr>
@@ -26,7 +28,7 @@
         </tbody>
     </table>
     <div class="col-md-3">
-        <a href="<?= base_url(); ?>index.php/Admin" class="btn btn-primary">Kembali</a>
+        <a href="<?= base_url(); ?>index.php/Admin" class="btn btn-danger">Kembali</a>
     </div>
     
 </div>

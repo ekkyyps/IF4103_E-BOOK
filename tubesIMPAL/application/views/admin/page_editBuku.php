@@ -30,6 +30,17 @@
                             <input type="text" name="penulis" class="form-control" id="penulis" placeholder="Penulis">
                         </div>
                         <div class="form-group">
+                            <label for="jenis">Jenis Buku</label>
+                            <select name="jenis">
+                                <option value="novel">novel</option>
+                                <option value="jurnal">jurnal</option>
+                                <option value="paper">paper</option>
+                                <option value="biografi">biografi</option>
+                                <option value="cerpen">cerpen</option>
+                            </select>
+                            <!-- <input type="text" name="jenis" class="form-control" id="jenis" placeholder="Jenis Buku"> -->w
+                        </div>
+                        <div class="form-group">
                             <label for="penulis">Isi</label>
                             <input type="text" name="isi" class="form-control" id="isi" placeholder="Isi" style="height: 100px;">
                         </div>

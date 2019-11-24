@@ -18,6 +18,17 @@ class Home extends CI_Controller {
 		$this->load->view('user/page_logAdm');
 	}
 
+    public function setelahlogin() {
+        $this->load->view('user/page_headerLogin');
+        $this->load->view('user/page_homepage');
+    }
+
+    public function pagejenis($jenis){
+        $databuku = $this->M_Home->getBuku($jenis);
+        $this->load->view('user/page_headerLogin');
+        $this->load->view('user/page_bacajenis',['data'=>$databuku]);
+    }
+
 	public function login() {
 		$username = $this->input->post("username");
         $password = $this->input->post("password");
@@ -28,7 +39,7 @@ class Home extends CI_Controller {
                 'status' => "login"
             );
             $this->session->set_userdata($data_session);
-            $this->load->view('user/page_homepage');
+            redirect('index.php/Home/setelahlogin');
         } else {
             echo '<script type="text/javascript">
                 alert("Maaf Username/Password Anda Salah");

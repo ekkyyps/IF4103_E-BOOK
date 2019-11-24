@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row">
-      <!-- <div class="col-md-3">
+      <div class="col-md-3">
         <a href="<?= base_url(); ?>index.php/Admin/tambahbuku" class="btn btn-primary">TAMBAH</a>
       </div>
       <div class="col-md-3">
@@ -8,7 +8,7 @@
       </div>
       <div class="col-md-3">
         <a href="<?= base_url(); ?>index.php/Admin/hapusBuku" class="btn btn-primary">HAPUS</a> 
-      </div> -->
+      </div>
       <div class="align-self-end ml-auto" style="float: right; align-self: center; ">
         <a href="<?= base_url(); ?>Admin/tambahkota" class="btn btn-primary">UNGGAH</a>
       </div>
@@ -22,6 +22,8 @@
     			<th>Judul Buku</th>
     			<th>Penerbit</th>
     			<th>Penulis</th>
+          <th>Jenis</th>
+          <th>COVER</th>
           <th>Admin Pengunggah</th>
     		</tr>
     	</thead>
@@ -34,6 +36,14 @@
 		            <td><?php echo $d->judul ?></td>
 		            <td><?php echo $d->penerbit ?></td>
 		            <td><?php echo $d->penulis ?></td>
+                <td><?php echo $d->jenis ?></td>
+                <td> 
+                  <?php
+                  if(file_exists($d->url)) {?>
+                    <img src="<?php echo base_url($d->url)?> " width="50px"><?php
+                  }
+                  ?>
+                </td>
                 <td><?php echo $d->no_pegawai?></td>
 	        	</form>
     		</tr>

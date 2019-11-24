@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 22 Nov 2019 pada 15.39
+-- Generation Time: 24 Nov 2019 pada 11.33
 -- Versi Server: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -54,6 +54,9 @@ CREATE TABLE `buku` (
   `judul` varchar(30) DEFAULT NULL,
   `penerbit` varchar(30) DEFAULT NULL,
   `penulis` varchar(30) DEFAULT NULL,
+  `jenis` varchar(30) DEFAULT NULL,
+  `url` varchar(50) NOT NULL,
+  `type` enum('image','video') NOT NULL,
   `isi` varchar(1000) DEFAULT NULL,
   `no_pegawai` int(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -62,9 +65,10 @@ CREATE TABLE `buku` (
 -- Dumping data untuk tabel `buku`
 --
 
-INSERT INTO `buku` (`ISBN`, `judul`, `penerbit`, `penulis`, `isi`, `no_pegawai`) VALUES
-(1, 'Ricky Hebat ', 'Sangat', 'Hebat', 'aosdk', 1301174125),
-(7777, 'Soe Hok Gie', 'Gramedia', 'Soe Hok Gie', 'CERITA HIDUP SOE HOK GIE', 1301174038);
+INSERT INTO `buku` (`ISBN`, `judul`, `penerbit`, `penulis`, `jenis`, `url`, `type`, `isi`, `no_pegawai`) VALUES
+(1, '128', 'Novel1', 'Novel1', 'novel', 'assets/uploads/cover1.jpg', '', 'as', 1301174125),
+(2, 'as', 'as', 'gramded', 'novel', 'assets/uploads/cover2.jpg', '', 'as', 1301174125),
+(57575, 'ask', 'as', 'as', 'biografi', 'assets/uploads/cover57575.jpg', '', 'as', 1301174125);
 
 -- --------------------------------------------------------
 
@@ -85,7 +89,9 @@ CREATE TABLE `pembaca` (
 --
 
 INSERT INTO `pembaca` (`uname`, `email`, `pass`, `tgl_lahir`, `keterangan`) VALUES
-('pembaca1', 'pembaca@gmail.com', '123', '6 Juni 1999', 'pembaca');
+('pembaca1', 'pembaca@gmail.com', '123', '6 Juni 1999', 'pembaca'),
+('qw', 'aksaks@gmail.com', '123', '060699', 'pembaca'),
+('qr', 'asksak@gmail.com', '123', '119191', 'pembaca');
 
 -- --------------------------------------------------------
 

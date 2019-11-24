@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>ADMIN</title>
+  <title>e-BOOK</title>
   <link rel="shortcut icon" href="<?php echo base_url('assets/img/logo.png') ?>">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,7 +55,7 @@
 <nav class="navbar navbar-white ">
   <div class="container">
     <div class="navbar-header">
-    	<a href="<?php echo base_url('index.php/Admin') ?>">
+    	<a href="<?php echo base_url('index.php/Home/setelahlogin') ?>">
 			<img src="<?php echo base_url('assets/img/logo.png') ?>"  style="width: 20%">
 		</a>
     </div>
@@ -66,11 +66,11 @@
     </ul> -->
     <ul class="nav navbar-nav navbar-right text-center">
       <li class="dropdown pull-right">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span><?php echo $this->session->userdata("no_pegawai"); ?>
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span><?php echo $this->session->userdata("nama"); ?>
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="#"></a></li>
-          <li><a href="<?php echo base_url('index.php/Admin/logout'); ?>">Log Out</a></li>
+          <li><a href="<?php echo base_url('index.php/Home/logout'); ?>">Log Out</a></li>
         </ul>
       </li>
     </ul>

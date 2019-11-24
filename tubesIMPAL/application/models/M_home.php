@@ -12,6 +12,19 @@ class M_Home extends CI_Model {
         return $query->num_rows();
     }
 
+    public function getAllBuku() {
+        $query = $this->db->get('buku');
+        return $query->result();
+    }
+
+    public function getBuku($jenis) {
+        $this->db->select('*');
+        $this->db->from('buku');
+        $this->db->where('jenis',$jenis); 
+        $query = $this->db->get();
+        return $query->result();
+    }
+
 	public function tambahPembaca() {
 		$data = [    	
         	'uname' => $this->input->post('uname',true),
