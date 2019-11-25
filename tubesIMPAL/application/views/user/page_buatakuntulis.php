@@ -1,4 +1,8 @@
 <style type="text/css">
+		.text{
+			text-align: center;
+			font-family: Courier New;
+		}
 		.container {
 			text-align: center;
 		}
@@ -27,7 +31,7 @@
 		}
 </style>
 
-<div class="text" style="text-align: center;">
+<div class="text">
 		<h1>Let's Join e-Book!</h1>
 		<h3 style="color: grey">start your journey now</h3>
 	</div>
