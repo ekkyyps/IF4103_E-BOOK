@@ -130,7 +130,7 @@
 				<div class="col-lg-1"></div>
 				
 				<div class="col-lg-4">
-					<form action="<?php echo base_url('index.php/Home/register_baca'); ?>" action="GET" method="post">
+					<form action="<?php echo base_url('index.php/Home/login'); ?>" action="GET" method="post">
 						
 						<!-- title -->
 						<div class="form-group" style="padding-right: 264px; font-family: Arial; font-size: 18px;">
@@ -144,7 +144,7 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
       							<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-        						<input type="text" name="uname" placeholder="username" class="form-control">
+        						<input type="text" name="username" placeholder="username" class="form-control">
         					</div>
         				</div>
 
@@ -155,7 +155,7 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
       							<span class="input-group-addon"><i class="fa fa-lock fa" aria-hidden="true"></i></span>
-        						<input type="text" name="pass" placeholder="password" class="form-control">
+        						<input type="password" name="password" placeholder="password" class="form-control">
         					</div>
         				</div>
 

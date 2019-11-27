@@ -24,7 +24,7 @@ class Admin extends CI_Controller {
     public function login() 
     {
         $no_pegawai= $this->input->post("no_pegawai");
-        $passwordA = $this->input->post("passwordA");
+        $passwordA = md5($this->input->post("passwordA"));
         $cek = $this->M_Admin->ceklogin($no_pegawai, $passwordA);
         if ($cek > 0) {
             $data_session = array(
@@ -85,5 +85,23 @@ class Admin extends CI_Controller {
     public function hpsBUKU($ISBN) {
         $this->M_Admin->hapusBuku($ISBN);
         redirect('index.php/Admin/hapusBuku','refresh');
+    }
+
+    public function unggahbuku() {
+        $databuku = $this->M_Admin->getAllBukuPenulis();
+        $this->load->view('Admin/page_headerAdm');
+        $this->load->view('Admin/page_unggahbuku',['data'=>$databuku]);
+    }
+
+    public function publishbuku() {
+        $this->form_validation->set_rules('ISBN','ISBN','required');
+        if($this->form_validation->run() == FALSE) {
+            $databuku = $this->M_Admin->getAllBukuPenulis();
+            $this->load->view('Admin/page_headerAdm');
+            $this->load->view('Admin/page_unggahbuku',['data'=>$databuku]);
+        } else {
+            $this->M_Admin->tambahbukupenulis();
+            redirect('index.php/Admin/unggahbuku');
+        }
     }
 }

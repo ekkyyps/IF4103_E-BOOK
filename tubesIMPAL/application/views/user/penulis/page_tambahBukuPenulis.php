@@ -3,10 +3,11 @@
         <div class="col-md-6">
             <div class="card border-primary">
                 <div class="card-header">
-                    <h2>Edit Data Buku</h2>
+                    <h2>Masukkan Data Buku</h2>
                 </div>
                 <br>
                 <div class="card-body">
+                    <?php echo form_open_multipart('index.php/Home/tambahbukuPenulis')?>
                     <?php if(validation_errors() ) :?>
                         <div class="alert alert-danger" role="alert">
                             <?= validation_errors();?>
@@ -14,8 +15,8 @@
                     <?php endif; ?>
                     <form action="" method="post">
                         <div class="form-group">
-                            <label for="ISBN">ISBN : <?php echo $data?></label>
-                           <!--  <input type="number" name="ISBN" class="form-control" id="ISBN" placeholder="<?php echo $data?>"> -->
+                            <label for="ISBN">ISBN</label>
+                            <input type="number" name="ISBN" class="form-control" id="ISBN" placeholder="ISBN">
                         </div>
                         <div class="form-group">
                             <label for="judul">Judul Buku</label>
@@ -38,18 +39,23 @@
                                 <option value="biografi">biografi</option>
                                 <option value="cerpen">cerpen</option>
                             </select>
-                            <!-- <input type="text" name="jenis" class="form-control" id="jenis" placeholder="Jenis Buku"> -->w
+                            <!-- <input type="text" name="jenis" class="form-control" id="jenis" placeholder="Jenis Buku"> -->
+                        </div>
+                        <div class="form-group">
+                            <label>Cover</label>
+                            <input type="file" name="image" class="form-control">
+                            
                         </div>
                         <div class="form-group">
                             <label for="penulis">Isi</label>
                             <input type="text" name="isi" class="form-control" id="isi" placeholder="Isi" style="height: 100px;">
                         </div>
-                        
-                        <div class="col-md-3" style="float: left;">
-                            <a href="<?= base_url(); ?>index.php/Admin" class="btn btn-danger">Kembali</a>
-                        </div>
-                        <button class="btn btn-primary float-right" type="submit" name="tambah">Tambah</button>
+                        <button class="btn btn-primary float-right" type="submit" name="tambah" style="float: right;">Tambah</button>
                     </form>
+                    <?php echo form_close() ?>
+                </div>
+                <div class="col-md-3" style="float: left;">
+                    <a href="<?= base_url(); ?>index.php/Home/setelahloginpenulis" class="btn btn-danger">Batal</a>
                 </div>
             </div>
         </div>

@@ -59,17 +59,11 @@
 			<img src="<?php echo base_url('assets/img/logo.png') ?>"  style="width: 20%">
 		</a>
     </div>
-    <!-- <ul class="nav navbar-nav">
-      <li><a href="<?php echo base_url('Admin/listkota....') ?>">TAMBAH</a></li>
-      <li><a href="<?php echo base_url('Admin/....listkirim') ?>">EDIT</a></li>
-      <li><a href="<?php echo base_url('Admin/.....listlokasi') ?>">HAPUS</a></li>
-    </ul> -->
     <ul class="nav navbar-nav navbar-right text-center">
       <li class="dropdown pull-right">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span><?php echo $this->session->userdata("no_pegawai"); ?>
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#"></a></li>
           <li><a href="<?php echo base_url('index.php/Admin/logout'); ?>">Log Out</a></li>
         </ul>
       </li>

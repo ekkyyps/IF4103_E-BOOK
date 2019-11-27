@@ -9,8 +9,8 @@
       <div class="col-md-3">
         <a href="<?= base_url(); ?>index.php/Admin/hapusBuku" class="btn btn-primary">HAPUS</a> 
       </div>
-      <div class="align-self-end ml-auto" style="float: right; align-self: center; ">
-        <a href="<?= base_url(); ?>Admin/tambahkota" class="btn btn-primary">UNGGAH</a>
+      <div class="col-md-3">
+        <a href="<?= base_url(); ?>index.php/Admin/unggahbuku" class="btn btn-primary">UNGGAH</a>
       </div>
     </div>
 
@@ -98,7 +98,6 @@
       </div>
     </div>
   </div>
-
 
   </body>
     <script type="text/javascript">

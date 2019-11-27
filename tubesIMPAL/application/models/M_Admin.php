@@ -17,6 +17,11 @@ class M_Admin extends CI_Model
     	return $query->result();
     }
 
+    public function getAllBukuPenulis() {
+        $query = $this->db->get('bukupenulis');
+        return $query->result();
+    }
+
     public function tambahDataBuku()
     {
         $file_tmp = $_FILES['image']['tmp_name'];
@@ -39,6 +44,20 @@ class M_Admin extends CI_Model
             'jenis' => $this->input->post('jenis',true),
             'url' => $file_path,
             'type' => $file_type,
+            'no_pegawai' =>  $this->session->userdata("no_pegawai")
+        ];
+        $this->db->insert('buku',$data);
+    }
+    public function tambahbukupenulis(){
+        $data = [
+            'ISBN' => $this->input->post('ISBN',true),
+            'judul' => $this->input->post('judul',true),
+            'penerbit' => $this->input->post('penerbit',true),
+            'penulis' => $this->input->post('penulis',true),
+            'isi' => $this->input->post('isi',true),
+            'jenis' => $this->input->post('jenis',true),
+            'url' => $this->input->post('cover',true),
+            'type' => $this->input->post('type',true),
             'no_pegawai' =>  $this->session->userdata("no_pegawai")
         ];
         $this->db->insert('buku',$data);
@@ -74,6 +93,4 @@ class M_Admin extends CI_Model
         $this->db->delete('buku');
         return;
     }
-
-    
 }

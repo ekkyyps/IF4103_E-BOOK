@@ -95,7 +95,7 @@
 				<div class="col-md-2"></div>
 				
 				<div class="col-md-4">
-					<form action="<?php echo base_url('index.php/Home/register_baca'); ?>" action="GET" method="post">
+					<form action="<?php echo base_url('index.php/Home/register_tulis'); ?>" action="GET" method="post">
 
 						<!-- username -->
 						<p></p>
@@ -126,7 +126,7 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
       							<span class="input-group-addon"><i class="fa fa-lock fa" aria-hidden="true"></i></span>
-        						<input type="text" name="pass" placeholder="password" class="form-control">
+        						<input type="password" name="pass" placeholder="password" class="form-control">
         					</div>
         				</div>
 
@@ -137,7 +137,7 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
       								<span class="input-group-addon"><i class="far fa-calendar-alt" aria-hidden="true"></i></span>
-									<input type="date" name="tgl_lahir"  id="dateofbirth" style="border-radius: 3px; height: 32px; width: 263px; text-align: center;">
+									<input type="date" name="tanggal"  id="tanggal" style="border-radius: 3px; height: 32px; width: 263px; text-align: center;">
 								</div>
         					</div>
         				</div>
