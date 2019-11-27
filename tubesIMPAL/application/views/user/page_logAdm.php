@@ -23,11 +23,10 @@
 			<form action="<?php echo base_url('index.php/Admin/login'); ?>" action="GET"  method="post" style="background-color:white;">       
                 <h3 class="text-center title-login" style=" font-weight: bold; ">LOGIN ADMIN</h3>
                     <div class="form-group" style="border-radius: 40%; padding-top: 20px;">
-                        <input type="text" class="form-control" name="no_pegawai" placeholder="No Pegawai">
+                        <input type="text" class="form-control" name="no_pegawai" placeholder="no pegawai">
                     </div>
-
                     <div class="form-group">
-                        <input type="password" class="form-control" name="passwordA" placeholder="Password">
+                        <input type="password" class="form-control" name="passwordA" placeholder="password">
                     </div>
                     <input type="submit" class="btn" value="LOG IN">
             </form>
