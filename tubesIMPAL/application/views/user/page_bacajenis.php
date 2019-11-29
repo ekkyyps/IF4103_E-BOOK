@@ -12,7 +12,8 @@
     	</thead>
     	<tbody>
     		<?php $no=1; foreach ($data as $d ) {?>
-    		<tr>
+    		<tr class="clickable" onclick="window.location='<?php echo base_url('index.php/Home/pageisibuku/'.$d->ISBN);?>'" href="" >
+          <a value="<?php echo $d->ISBN; ?>" href="<?php echo base_url('index.php/Home/pageisibuku/'.$d->ISBN);?>" class="btn" style="margin-top: 3.8vw;  visibility: hidden">Telusuri</a>
 	    		<form action="">
 		            <td><?php echo $no++ ?></td>
 		            <td><?php echo $d->ISBN ?></td>
@@ -32,3 +33,13 @@
     		<?php }?>
     	</tbody>
     </table>
+
+
+<!-- <script>
+$(document).ready(function(){
+ $('tr.clickable').click(function(){
+  window.location = $(this).find("a").attr("href");
+ });
+ 
+});
+</script> -->

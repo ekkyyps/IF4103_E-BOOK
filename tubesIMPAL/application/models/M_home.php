@@ -34,6 +34,14 @@ class M_Home extends CI_Model {
         return $query->result();
     }
 
+    public function getBukuISBN($ISBN) {
+        $this->db->select('*');
+        $this->db->from('buku');
+        $this->db->where('ISBN',$ISBN); 
+        $query = $this->db->get();
+        return $query->result();   
+    }
+
     public function getBukuPenulis($uname) {
         $this->db->select('*');
         $this->db->from('bukupenulis');

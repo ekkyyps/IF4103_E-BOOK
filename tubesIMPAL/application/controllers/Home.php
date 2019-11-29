@@ -20,8 +20,15 @@ class Home extends CI_Controller {
 
     public function pagejenis($jenis){
         $databuku = $this->M_Home->getBuku($jenis);
-        $this->load->view('user/page_headerLogin');
+        // $this->load->view('user/page_headerLogin');
+        $this->load->view('user/pembaca/page_headerLoginPembaca');
         $this->load->view('user/page_bacajenis',['data'=>$databuku]);
+    }
+
+    public function pageisibuku($ISBN) {
+        $databuku = $this->M_Home->getBukuISBN($ISBN);
+        $this->load->view('user/pembaca/page_headerLoginPembaca');
+        $this->load->view('user/page_bacaisi',['data'=>$databuku]);
     }
 
 	public function login() {
@@ -53,14 +60,14 @@ class Home extends CI_Controller {
 	}
 
     public function setelahloginpembaca() {
-        $this->load->view('user/page_headerLogin');
+        $this->load->view('user/pembaca/page_headerLoginPembaca');
         $this->load->view('user/pembaca/page_homepagePembaca');
     }
 
     public function setelahloginpenulis() {
         $uname = $this->session->userdata("nama");
         $databuku = $this->M_Home->getBukuPenulis($uname);
-        $this->load->view('user/page_headerLogin');
+        $this->load->view('user/penulis/page_headerLoginPenulis');
         $this->load->view('user/penulis/page_homepagePenulis',['data'=>$databuku]);
     }
 
@@ -147,7 +154,7 @@ class Home extends CI_Controller {
     public function tambahbukuPenulis() {
         $this->form_validation->set_rules('ISBN','ISBN','required');
         if($this->form_validation->run() == FALSE) {
-            $this->load->view('user/page_headerLogin');
+            $this->load->view('user/penulis/page_headerLoginPenulis');
             $this->load->view('user/penulis/page_tambahBukuPenulis');
         } else {
             $this->M_Home->tambahDataBukuPenulis();

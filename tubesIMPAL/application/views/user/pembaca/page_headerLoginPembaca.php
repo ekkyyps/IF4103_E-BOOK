@@ -58,7 +58,7 @@
 <nav class="navbar navbar-white ">
   <div class="container">
     <div class="navbar-header">
-    	<!-- <a href="<?php echo base_url('index.php/Home/setelahloginpembaca') ?>"> -->
+    	<a href="<?php echo base_url('index.php/Home/setelahloginpembaca') ?>">
 			<img src="<?php echo base_url('assets/img/logo.png') ?>"  style="width: 20%">
 		</a>
     </div>
