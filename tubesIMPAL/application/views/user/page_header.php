@@ -45,20 +45,42 @@
 			height: 40px;
 		}
 
+
+		
+
 	</style>
 
 </head>
 <body>
-	<div class="navbar">
-		<a href="<?php echo base_url('index.php/Home') ?>">
-			<img src="<?php echo base_url('assets/img/logo.png') ?>"  style="width: 20%">
-		</a>
+	<div class="navbar row">
+		<div class="col-lg-6" >
+			<a href="<?php echo base_url('index.php/Home') ?>">
+				<img src="<?php echo base_url('assets/img/logo.png') ?>"  style="width: 30%; margin-left: 30px;">
+			</a>
+		</div>
+		<div class="col-lg-6" style="margin-top: 25px;">
+			<input type="text" placeholder="Search" class="form-control" style="margin-left: 200px; width: 300px; float: left;">
+			<span class="input-group-addon" style=" width: 65px; height: 33px;"><i class="fa fa-search fa" aria-hidden="true" ></i></span>
+		</div>
+		
+
 		<!-- <div class="search" style="float: right; padding-top: 3vw;">
             <input type="text" placeholder="Search Keywords" name="keyword" style="border-style: solid; border-radius: 30px; color: #303030; "> 
             <button type="submit" style="background-color: white; height: 25px; width: 30px; border-radius: 5px;">
             	<i class="fa fa-search" style="height: 100%; margin-right:6px;"> </i>
             </button>
         </div> -->
+        <!-- Search form -->
+        <!-- <form> -->
+          <!-- <div class="row mb-4"> -->
+            <!-- <div class="form-group col-md-9"> -->
+          <!--     <input id="exampleFormControlInput5" type="email" placeholder="Search" class="form-control form-control-underlined" style="width: 200px;"> -->
+            <!-- </div> -->
+    <!--         <div class="form-group col-md-3"> -->
+              <!-- <button type="submit" class="btn btn-primary rounded-pill btn-block shadow-sm" style="width: 100px;">Search</button> -->
+            <!-- </div> -->
+          <!-- </div> -->
+
 	</div>
 
 

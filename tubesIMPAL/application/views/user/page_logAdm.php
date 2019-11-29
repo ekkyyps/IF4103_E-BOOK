@@ -14,7 +14,6 @@
 
 
 <div class="container">
-
 		<div class="bagian1" style="width: 70%; font-family: Courier New; padding-top: 50px; float: left; text-align: left;">
             <h2>WELCOME TO e-BOOK!</h2>
             <h3>most-completed books platform in the world</h3>

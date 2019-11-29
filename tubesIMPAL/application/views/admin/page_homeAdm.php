@@ -1,56 +1,88 @@
-<div class="container">
-	<div class="row">
-      <div class="col-md-3">
-        <a href="<?= base_url(); ?>index.php/Admin/tambahbuku" class="btn btn-primary">TAMBAH</a>
-      </div>
-      <div class="col-md-3">
-        <a href="" class="btn btn-primary" data-toggle="modal" data-target="#edit">EDIT</a>
-      </div>
-      <div class="col-md-3">
-        <a href="<?= base_url(); ?>index.php/Admin/hapusBuku" class="btn btn-primary">HAPUS</a> 
-      </div>
-      <div class="col-md-3">
-        <a href="<?= base_url(); ?>index.php/Admin/unggahbuku" class="btn btn-primary">UNGGAH</a>
-      </div>
-    </div>
+<style type="text/css">
+  h3{
+    text-align: center;
+    font-family: Verdana;
+    font-weight: bold;
 
-    <table class="table table-bordered" id="table" >
-    	<thead>
-    		<tr>
-    			<th>No</th>
-    			<th>Nomor ISBN</th>
-    			<th>Judul Buku</th>
-    			<th>Penerbit</th>
-    			<th>Penulis</th>
-          <th>Jenis</th>
-          <th>COVER</th>
-          <th>Admin Pengunggah</th>
-    		</tr>
-    	</thead>
-    	<tbody>
-    		<?php $no=1; foreach ($data as $d ) {?>
-    		<tr>
-	    		<form action="">
-		            <td><?php echo $no++ ?></td>
-		            <td><?php echo $d->ISBN ?></td>
-		            <td><?php echo $d->judul ?></td>
-		            <td><?php echo $d->penerbit ?></td>
-		            <td><?php echo $d->penulis ?></td>
-                <td><?php echo $d->jenis ?></td>
-                <td> 
-                  <?php
-                  if(file_exists($d->url)) {?>
-                    <img src="<?php echo base_url($d->url)?> " width="50px"><?php
-                  }
-                  ?>
-                </td>
-                <td><?php echo $d->no_pegawai?></td>
-	        	</form>
-    		</tr>
-    		<?php }?>
-    	</tbody>
-    </table>
-</div>
+  }
+  .table{
+    margin-top: 15px;
+    text-align: center;
+  }
+  thead{
+    background-color:#14868c;
+    padding-top: 10px;
+  }
+  th{
+    text-align: center;
+    background-color:#14868c;
+    color: white;
+  }
+  .row{
+    margin-left: 7vw;
+  }
+  .container{
+
+  }
+  
+
+</style>
+
+
+
+<h3>DAFTAR KARYA</h3>
+  <div class="container">
+      <table class="table" id="table table-responsive" >
+      	<thead>
+      		<tr>
+      			<th>No</th>
+      			<th>Nomor ISBN</th>
+      			<th>Judul Buku</th>
+      			<th>Penerbit</th>
+      			<th>Penulis</th>
+            <th>Jenis</th>
+            <th>COVER</th>
+            <th>Admin Pengunggah</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+      		<?php $no=1; foreach ($data as $d ) {?>
+      		<tr>
+  	    		<form action="">
+  		            <td><?php echo $no++ ?></td>
+  		            <td><?php echo $d->ISBN ?></td>
+  		            <td><?php echo $d->judul ?></td>
+  		            <td><?php echo $d->penerbit ?></td>
+  		            <td><?php echo $d->penulis ?></td>
+                  <td><?php echo $d->jenis ?></td>
+                  <td> 
+                    <?php
+                    if(file_exists($d->url)) {?>
+                      <img src="<?php echo base_url($d->url)?> " width="50px"><?php
+                    }
+                    ?>
+                  </td>
+                  <td><?php echo $d->no_pegawai?></td>
+  	        	</form>
+      		</tr>
+      		<?php }?>
+      	</tbody>
+      </table>
+        <div class="row">
+        <div class="col-md-3">
+          <a href="<?= base_url(); ?>index.php/Admin/tambahbuku" class="btn btn-primary">TAMBAH</a>
+        </div>
+        <div class="col-md-3">
+          <a href="" class="btn btn-primary" data-toggle="modal" data-target="#edit">EDIT</a>
+        </div>
+        <div class="col-md-3">
+          <a href="<?= base_url(); ?>index.php/Admin/hapusBuku" class="btn btn-primary">HAPUS</a> 
+        </div>
+        <div class="col-md-3">
+          <a href="<?= base_url(); ?>index.php/Admin/unggahbuku" class="btn btn-primary">UNGGAH</a>
+        </div>
+      </div>
+  </div>
 
 <!--EDIT-->
 

@@ -18,23 +18,23 @@
     padding:0;
     list-style:none;
   }*/
-  h3{
-    text-align: center; 
-    padding-top: 7px;
-  }
-  .card .col-xl-2{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 15.5vw;
-    height: 23vw;
-    border-radius:5px;
-    background-color: white; 
-    margin-right: 15px;
-    font-family: "Verdana", sans-serif;
+  h5{
+    font-size: 22px;
+    text-align: center;
     font-weight: bold;
-    margin-top: 55px;
+    padding-right: 7px;
   }
-  .container .card .col-xl-2 .btn{
+  p{
+    margin-left: 1vw;
+    margin-top: 1.5vw;
+    line-height: 25px;
+  }
+/*  .card .col-xl-2:hover{
+    background: #ff0057;
+    transform: translateY(0);
+    box-shadow: 0 8px 16px 0 rgba()
+  }*/
+/*  .card .col-sm-2 .btn{
     background-color:#14868c;
     border-radius: 5px;
     width: 15.5vw;
@@ -47,30 +47,43 @@
     margin-top: 20vw;
     margin-right: 1px;
   }
-  .card .col-xl-2 .btn:hover{
+  .card .col-sm-2 .btn:hover{
     opacity: 0.8; 
-  }
+  }*/
 
   /*edit*/
   .col-sm-2 {
-    margin-left: 0.5vw;
-    margin-right: 2vw;
+    margin-left: 0vw;
+    margin-right: 2.5vw;
   }
   .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    width: 15vw;
-    height: 20vw;
-    border-radius:5px;
+    width: 16vw;
+    height: 22vw;
+    border-radius:8px;
     background-color: white; 
-    font-family: "Verdana", sans-serif;
-    font-weight: bold;
+    margin-top: 5vw;
+  }
+  .card:hover{
+    box-shadow: 0 8px 16px 3px rgba(0,0,0,1);
+
   }
   .card .card-body {
     padding-top: 1vw;
-    margin-left: 1vw;
+    font-family: "Verdana", sans-serif;
   }
-
+  .container .row .col-sm-2 .card-body .btn{
+    background-color:#14868c;
+    border-radius: 5px;
+    width: 12vw;
+    height: 40px;
+    color: white;
+    border-color: none;
+    font-family: Courier New;
+    font-weight: bold;
+    margin-left: 2vw;
+  }
 
 
 </style>
@@ -82,49 +95,50 @@
 <?php $data['biografi']= ('biografi'); ?>
 
 <div class="container">
-<div class="row">
-  <div class="col-sm-2">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">NOVEL</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a value="<?php echo $data['novel']; ?>" href="<?php echo base_url('index.php/Home/pagejenis/'.$data['novel']);?>" class="btn btn-primary">Telusuri Novel</a>
+  <div class="row">
+    <div class="col-sm-2">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">NOVEL</h5>
+          <p class="card-text">Kumpulan cerita dari tokoh yang mengandung rangkian cerita kehidupan. Nikmati beragam karya dari penulis terkenal dan keseruan dari ceritanya.</p>
+          <a value="<?php echo $data['novel']; ?>" href="<?php echo base_url('index.php/Home/pagejenis/'.$data['novel']);?>" class="btn" style="margin-top: 3.8vw;">Telusuri Novel</a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col-sm-2">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">JURNAL</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a value="<?php echo $data['jurnal']; ?>" href="<?php echo base_url('index.php/Home/pagejenis/'.$data['jurnal']);?>" class="btn btn-primary">Telusuri  Jurnal</a>
+    <div class="col-sm-2">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">JURNAL</h5>
+          <p class="card-text">Tulisan khusus yang memuat artikel dari bidang ilmu tertentu. Menambah wawasan dan pengetahuan anda.</p>
+          <a value="<?php echo $data['jurnal']; ?>" href="<?php echo base_url('index.php/Home/pagejenis/'.$data['jurnal']);?>" class="btn" style="margin-top: 5.5vw; ">Telusuri  Jurnal</a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col-sm-2">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">PAPER</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a value="<?php echo $data['paper']; ?>" href="<?php echo base_url('index.php/Home/pagejenis/'.$data['paper']);?>" class="btn btn-primary">Telusuri Paper</a>
+    <div class="col-sm-2">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">PAPER</h5>
+          <p class="card-text">Karya Tulis Ilmiah terperinci dan hasil dari suatu penelitian atau riset. Tersedia lengkap dan informatif.</p>
+          <a value="<?php echo $data['paper']; ?>" href="<?php echo base_url('index.php/Home/pagejenis/'.$data['paper']);?>" class="btn" style="margin-top: 5.5vw;">Telusuri Paper</a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col-sm-2">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">CERITA PENDEK</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a value="<?php echo $data['cerpen']; ?>" href="<?php echo base_url('index.php/Home/pagejenis/'.$data['cerpen']);?>" class="btn btn-primary">Telusuri Cerpen</a>
+    <div class="col-sm-2">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size:18px;">CERITA PENDEK</h5>
+          <p class="card-text">Kumpulan dari prosa fiksi yang menceritakan satu peristiwa istimewa dari tokoh. Kumpulan cerita pendek yang inovatif, kreatif, dan penuh inspiratif.</p>
+          <a value="<?php echo $data['cerpen']; ?>" href="<?php echo base_url('index.php/Home/pagejenis/'.$data['cerpen']);?>" class="btn" style="margin-top: 4vw;">Telusuri Cerpen</a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col-sm-2">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">BIOGRAFI</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a value="<?php echo $data['biografi']; ?>" href="<?php echo base_url('index.php/Home/pagejenis/'.$data['biografi']);?>" class="btn btn-primary">Telusuri Biografi</a>
+    <div class="col-sm-2">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">BIOGRAFI</h5>
+          <p class="card-text">Riwayat hidup seseorang yang ditulis oleh orang lain. Penuh inspiratif, bermanfaat, dan informatif.</p>
+          <a value="<?php echo $data['biografi']; ?>" href="<?php echo base_url('index.php/Home/pagejenis/'.$data['biografi']);?>" class="btn" style="margin-top: 7.5vw;">Telusuri Biografi</a>
+        </div>
       </div>
     </div>
   </div>

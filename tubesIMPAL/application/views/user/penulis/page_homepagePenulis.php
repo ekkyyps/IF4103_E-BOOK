@@ -1,9 +1,32 @@
-<div class="container" style="float: right;">
-  <a href="<?= base_url(); ?>index.php/Home/tambahbukuPenulis" class="btn btn-primary">BUAT</a>
-  <a href="<?= base_url(); ?>Admin/tambahkota" class="btn btn-primary">UNGGAH</a>
-</div>
 
- <table class="table table-bordered" id="table" >
+<style type="">
+  h3{
+    text-align: center;
+    font-family: Verdana;
+    font-weight: bold;
+
+  }
+  .table{
+    table-layout: fixed;
+    text-align: center;
+}
+  thead{
+    background-color:#14868c;
+    padding-top: 10px;
+  }
+  th{
+    text-align: center;
+    background-color:#14868c;
+    color: white;
+  }
+  .btn{
+    margin-left: 80vw;
+  }
+</style>
+
+<h3>DAFTAR KARYA</h3>
+<div class="container" style="">
+<table class="table table-responsive" id="table" >
       <thead>
         <tr>
           <th>No</th>
@@ -24,7 +47,7 @@
                 <td> 
                   <?php
                   if(file_exists($d->url)) {?>
-                    <img src="<?php echo base_url($d->url)?> " width="50px"><?php
+                    <img src="<?php echo base_url($d->url)?>" width="50px"><?php
                   }
                   ?>
                 </td>
@@ -32,4 +55,7 @@
         </tr>
         <?php }?>
       </tbody>
-    </table>
+</table>
+  <a href="<?= base_url(); ?>index.php/Home/tambahbukuPenulis" class="btn btn-primary">BUAT BARU</a>
+<!--   <a href="<?= base_url(); ?>Admin/tambahkota" class="btn btn-primary">UNGGAH</a> -->
+</div>
