@@ -54,6 +54,12 @@ class Admin extends CI_Controller {
         $this->load->view('user/page_logAdm');
     }
 
+    public function pageisibuku($ISBN) {
+        $databuku = $this->M_Admin->getBuku($ISBN);
+        $this->load->view('Admin/page_headerAdm');
+        $this->load->view('Admin/page_bacaisi',['data'=>$databuku]);
+    }
+
     public function tambahbuku()    {
         $this->form_validation->set_rules('ISBN','ISBN','required');
         if($this->form_validation->run() == FALSE) {

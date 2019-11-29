@@ -38,7 +38,7 @@
       </thead>
       <tbody>
         <?php $no=1; foreach ($data as $d ) {?>
-        <tr>
+        <tr class="clickable" onclick="window.location='<?php echo base_url('index.php/Home/pageisibukupenulis/'.$d->ISBN);?>'" href="" >
           <form action="">
                 <td><?php echo $no++ ?></td>
                 <td><?php echo $d->ISBN ?></td>

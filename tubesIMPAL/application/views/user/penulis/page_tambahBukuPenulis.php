@@ -1,9 +1,11 @@
 <div class="container mt-10">
     <div class="row mt-3">
-        <div class="col-md-6">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6" style="border-style: solid;box-shadow: 5px 5px 5px grey; background-color: white">
             <div class="card border-primary">
                 <div class="card-header">
-                    <h2>Masukkan Data Buku</h2>
+                    <h2 style="text-align: center">Tulis Bukumu !</h2>
                 </div>
                 <br>
                 <div class="card-body">
@@ -48,7 +50,8 @@
                         </div>
                         <div class="form-group">
                             <label for="penulis">Isi</label>
-                            <input type="text" name="isi" class="form-control" id="isi" placeholder="Isi" style="height: 100px;">
+                            <!-- <input type="text" name="isi" class="form-control" id="isi" placeholder="Isi" style="height: 100px;"> -->
+                            <textarea rows="20" name="isi" class="form-control" id="isi" placeholder="Isi"></textarea>
                         </div>
                         <button class="btn btn-primary float-right" type="submit" name="tambah" style="float: right;">Tambah</button>
                     </form>
@@ -57,7 +60,9 @@
                 <div class="col-md-3" style="float: left;">
                     <a href="<?= base_url(); ?>index.php/Home/setelahloginpenulis" class="btn btn-danger">Batal</a>
                 </div>
+                <br><br><br>
             </div>
         </div>
     </div>
+    <br><br>
 </div>

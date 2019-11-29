@@ -31,6 +31,13 @@ class Home extends CI_Controller {
         $this->load->view('user/page_bacaisi',['data'=>$databuku]);
     }
 
+    public function pageisibukupenulis($ISBN) {
+        $user = $this->session->userdata("nama");
+        $databuku = $this->M_Home->bacaBukuPenulis($ISBN,$user);
+        $this->load->view('user/penulis/page_headerLoginPenulis');
+        $this->load->view('user/page_bacaisi',['data'=>$databuku]);
+    }
+
 	public function login() {
 		$username = $this->input->post("username");
         $password = md5($this->input->post("password"));

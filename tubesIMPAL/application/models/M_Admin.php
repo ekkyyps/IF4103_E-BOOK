@@ -22,6 +22,14 @@ class M_Admin extends CI_Model
         return $query->result();
     }
 
+    public function getBuku($ISBN) {
+        $this->db->select('*');
+        $this->db->from('buku');
+        $this->db->where('ISBN',$ISBN);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
     public function tambahDataBuku()
     {
         $file_tmp = $_FILES['image']['tmp_name'];
