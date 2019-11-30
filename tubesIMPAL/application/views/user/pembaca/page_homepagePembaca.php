@@ -57,17 +57,18 @@
     margin-right: 2.5vw;
   }
   .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0);
     transition: 0.3s;
     width: 16vw;
     height: 22vw;
     border-radius:8px;
     background-color: white; 
     margin-top: 5vw;
+
   }
   .card:hover{
-    box-shadow: 0 8px 16px 3px rgba(0,0,0,1);
-
+    box-shadow: 0 6px 10px 0px rgba(0,0,0,0.2);
+    cursor: pointer;
   }
   .card .card-body {
     padding-top: 1vw;

@@ -48,7 +48,7 @@
 			height: 40px;
 			color: white;
 			border-color: none;
-
+			transition: 0.3s;
 		}
 		#btngo:hover{
 			opacity : 0.8;
@@ -63,10 +63,11 @@
 			float: right;
 			font-family: Courier New;
 			font-weight: bold;
+			transition: 0.3s;
 		}
 		.btn:hover{
-        	opacity: 0.8; 
-        	color: white;
+        	background-color:#3EBFB7 ;
+        	color: black;
         }
 
 </style>

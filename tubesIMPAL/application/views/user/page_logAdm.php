@@ -2,11 +2,14 @@
     .bagian2 .btn{
         background-color: #3EBFB7;
         color: black;
-        width: 150px; 
+        width: 40%; 
         border-radius: 5px; 
         font-weight: bold;
+        font-family: Courier New;
+        transition: 0.3s;
     }
     .bagian2 .btn:hover{
+        color: white;
         background-color: #14868c;
     }
 
@@ -27,7 +30,7 @@
                     <div class="form-group">
                         <input type="password" class="form-control" name="passwordA" placeholder="password">
                     </div>
-                    <input type="submit" class="btn" value="LOG IN">
+                    <input type="submit" class="btn" value="Login">
             </form>
 		</div>
 	</div>

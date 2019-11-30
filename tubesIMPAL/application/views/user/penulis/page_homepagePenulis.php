@@ -20,12 +20,26 @@
     color: white;
   }
   .btn{
+    background-color: #3EBFB7;
+    border-radius: 5px;
+    width: 100px; 
+    height: 35px;
+    color: black;
+    border-color: none;
     margin-left: 80vw;
+    font-family: Courier New;
+    font-weight: bold;
+    transition: 0.3s;
   }
+  .btn:hover{
+    background-color:#14868c;
+    color: white;
+  }
+
 </style>
 
 <h3>DAFTAR KARYA</h3>
-<div class="container" style="">
+<div class="container">
 <table class="table table-responsive" id="table" >
       <thead>
         <tr>
@@ -56,6 +70,6 @@
         <?php }?>
       </tbody>
 </table>
-  <a href="<?= base_url(); ?>index.php/Home/tambahbukuPenulis" class="btn btn-primary">BUAT BARU</a>
+  <a href="<?= base_url(); ?>index.php/Home/tambahbukuPenulis" class="btn">buat baru</a>
 <!--   <a href="<?= base_url(); ?>Admin/tambahkota" class="btn btn-primary">UNGGAH</a> -->
 </div>

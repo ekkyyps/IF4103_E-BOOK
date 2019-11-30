@@ -44,10 +44,8 @@
 			width: 10%;
 			height: 40px;
 		}
-
-
+	
 		
-
 	</style>
 
 </head>
@@ -59,8 +57,8 @@
 			</a>
 		</div>
 		<div class="col-lg-6" style="margin-top: 25px;">
-			<input type="text" placeholder="Search" class="form-control" style="margin-left: 200px; width: 300px; float: left;">
-			<span class="input-group-addon" style=" width: 65px; height: 33px;"><i class="fa fa-search fa" aria-hidden="true" ></i></span>
+			<input type="text" placeholder="Search" class="form-control" style="margin-left: 200px; width: 300px; float: left; border-radius: 5px 0px 0px 5px;">
+			<span class="input-group-addon" style=" width: 65px; height: 34px; border-radius: 0px 5px 5px 0px;"><i class="fa fa-search fa" aria-hidden="true" ></i></span>
 		</div>
 		
 

@@ -31,8 +31,8 @@
 
 
 <h3>DAFTAR KARYA</h3>
-  <div class="container">
-      <table class="table" id="table table-responsive" >
+  <div class="container ">
+      <table class="table table-responsive" id="table" >
       	<thead>
       		<tr>
       			<th>No</th>

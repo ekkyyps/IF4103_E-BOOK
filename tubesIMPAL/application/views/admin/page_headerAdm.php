@@ -49,16 +49,27 @@
 	  body {
 		  background-color: #D8D8D8;
 	  }
-  </style>
+    .col-lg-4{
+      color: black;
+      font-family: Courier New;
+      float: left;
+    }
+</style>
+
 </head>
 <body>
 <nav class="navbar navbar-white ">
   <div class="container">
-    <div class="navbar-header">
-    	<a href="<?php echo base_url('index.php/Admin') ?>">
-			<img src="<?php echo base_url('assets/img/logo.png') ?>"  style="width: 20%">
-		</a>
+    <div class="col-lg-5">
+      <div class="navbar-header">
+      	<a href="<?php echo base_url('index.php/Admin') ?>">
+  			<img src="<?php echo base_url('assets/img/logo.png') ?>"  style="width: 40%">
+  		</a>
+      </div>
     </div>
+  <div class="col-lg-4">
+    <h2>Hello Admin</h2>
+  </div>
     <ul class="nav navbar-nav navbar-right text-center">
       <li class="dropdown pull-right">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span><?php echo $this->session->userdata("no_pegawai"); ?>

@@ -10,10 +10,11 @@
 			border-radius: 5px;
 			background-color: #3EBFB7;
 			font-family: Courier new;
-			color: white;
+			color: black;
 		}
 		.col-lg-7 .b1:hover{
 			background-color: #14868c;
+			color: white;
 		}
 		.bagian1 .form1 .b1  {
 			float: left;
@@ -39,20 +40,24 @@
 			width: 40%;
 			height: 40px;
 			color: white;
-			border-color: none;	
+			border-color: none;
+			transition: 0.3s;	
 		}
 		.col-lg-4 .btng:hover{
 			opacity: 0.8;
 		}
 		.col-lg-4 .btn{
 			margin-top: 13px;
-			background-color: #14868c;
-			color: white;
+			background-color: #3EBFB7;
+			font-family: Courier New;
+			color: black;
 			width: 40%;
 			font-weight: bold;
+			transition: 0.3s;
 		}
 		.col-lg-4 .btn:hover{
-			opacity: 0.8;
+			background-color: #14868c;
+			color: white;
 		}
 
 

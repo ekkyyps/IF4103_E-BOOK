@@ -1,4 +1,42 @@
-  <table class="table table-bordered" id="table" >
+<style type="text/css">
+  h3{
+    text-align: center;
+    font-family: Verdana;
+    font-weight: bold;
+
+  }
+  .table{
+    table-layout: auto;
+    text-align: center;
+  }
+  thead{
+    background-color:#14868c;
+  }
+  th{
+    text-align: center;
+    background-color:#14868c;
+    color: white;
+  }
+  .btn{
+    background-color: #9d0b0b;
+    border-radius: 5px;
+    width: 100px; 
+    height: 35px;
+    color: white;
+    border-color: none;
+    font-family: Courier New;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  .btn:hover{
+    opacity: 0.8;
+  }
+</style>
+
+<div class="container">
+<!--   <h3>DAFTAR BACA</h3> -->
+  <a href="<?= base_url(); ?>index.php/Home/setelahloginpembaca/" class="btn">kembali</a>
+    <table class="table table-responsive" id="table" >
     	<thead>
     		<tr>
     			<th>No</th>
@@ -33,6 +71,7 @@
     		<?php }?>
     	</tbody>
     </table>
+</div>
 
 
 <!-- <script>

@@ -52,15 +52,25 @@
 	  body {
 		  background-color: #D8D8D8;
 	  }
+    .col-lg-4{
+      color: black;
+      font-family: Courier New;
+      float: left;
+    }
   </style>
 </head>
 <body>
 <nav class="navbar navbar-white ">
   <div class="container">
-    <div class="navbar-header">
-    	<a href="<?php echo base_url('index.php/Home/setelahloginpembaca') ?>">
-			<img src="<?php echo base_url('assets/img/logo.png') ?>"  style="width: 20%">
-		</a>
+    <div class="col-lg-5">
+      <div class="navbar-header">
+      	<a href="<?php echo base_url('index.php/Home/setelahloginpembaca') ?>">
+  			   <img src="<?php echo base_url('assets/img/logo.png') ?>"  style="width: 40%">
+  		  </a>
+      </div>
+    </div>
+    <div class="col-lg-4">
+       <h2>WELCOME TO e-BOOK!</h2>
     </div>
     <ul class="nav navbar-nav navbar-right text-center">
       <li class="dropdown pull-right">
