@@ -1,23 +1,4 @@
-
 <style type="text/css">
-  /*.row{
-    height: 25vw;
-  }
-  .row.heading h2 {
-    color: #000000;
-    font-size: 52.52px;
-    line-height: 95px;
-    font-weight: 400;
-    text-align: center;
-    margin: 0 0 40px;
-    padding-bottom: 20px;
-    text-transform: uppercase;
-  }
-  .ul{
-    margin:0;
-    padding:0;
-    list-style:none;
-  }*/
   h5{
     font-size: 22px;
     text-align: center;
@@ -29,29 +10,6 @@
     margin-top: 1.5vw;
     line-height: 25px;
   }
-/*  .card .col-xl-2:hover{
-    background: #ff0057;
-    transform: translateY(0);
-    box-shadow: 0 8px 16px 0 rgba()
-  }*/
-/*  .card .col-sm-2 .btn{
-    background-color:#14868c;
-    border-radius: 5px;
-    width: 15.5vw;
-    height: 40px;
-    color: white;
-    border-color: none;
-    float: right;
-    font-family: Courier New;
-    font-weight: bold;
-    margin-top: 20vw;
-    margin-right: 1px;
-  }
-  .card .col-sm-2 .btn:hover{
-    opacity: 0.8; 
-  }*/
-
-  /*edit*/
   .col-sm-2 {
     margin-left: 0vw;
     margin-right: 2.5vw;
@@ -153,50 +111,3 @@ $(document).ready(function(){
  
 });
 </script>
-
-<!-- 
-  <div class="card">
-      <div class="row-inline">
-          <div class="col-xl-2 col-md-6 mb-4">
-            <div class="card border-0 shadow">
-              <h3>NOVEL</h3>
-            </div>
-            <a value="<?php echo $data['novel']; ?>" href="<?php echo base_url('index.php/Home/pagejenis/'.$data['novel']);?>">
-            <input type="submit" class="btn" value="Telusuri"></a>
-          </div>
-
-          <div class="col-xl-2 col-md-6 mb-4">
-            <div class="card border-0 shadow">
-              <h3>JURNAL</h3>
-            </div>
-            <a value="<?php echo $data['jurnal']; ?>" href="<?php echo base_url('index.php/Home/pagejenis/'.$data['jurnal']);?>">
-            <input type="submit" class="btn" value="Telusuri"></a>
-          </div>
-
-          <div class="col-xl-2 col-md-6 mb-4">
-            <div class="card border-0 shadow">
-              <h3>PAPER</h3>
-            </div>
-            <a value="<?php echo $data['paper']; ?>" href="<?php echo base_url('index.php/Home/pagejenis/'.$data['paper']);?>">
-            <input type="submit" class="btn" value="Telusuri"></a>
-          </div>
-
-          <div class="col-xl-2 col-md-6 mb-4">
-            <div class="card border-0 shadow">
-              <h3>CERPEN</h3>
-            </div>
-            <a value="<?php echo $data['cerpen']; ?>" href="<?php echo base_url('index.php/Home/pagejenis/'.$data['cerpen']);?>">
-            <input type="submit" class="btn" value="Telusuri"></a>
-          </div>
-
-          <div class="col-xl-2 col-md-6 mb-4">
-            <div class="card border-0 shadow">
-              <h3>BIOGRAFI</h3>
-            </div>
-            <a value="<?php echo $data['biografi']; ?>" href="<?php echo base_url('index.php/Home/pagejenis/'.$data['biografi']);?>">
-            <input type="submit" class="btn" value="Telusuri"></a>
-          </div>
-    
-      </div>
-  </div>
-</div> -->

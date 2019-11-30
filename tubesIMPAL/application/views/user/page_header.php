@@ -62,23 +62,6 @@
 		</div>
 		
 
-		<!-- <div class="search" style="float: right; padding-top: 3vw;">
-            <input type="text" placeholder="Search Keywords" name="keyword" style="border-style: solid; border-radius: 30px; color: #303030; "> 
-            <button type="submit" style="background-color: white; height: 25px; width: 30px; border-radius: 5px;">
-            	<i class="fa fa-search" style="height: 100%; margin-right:6px;"> </i>
-            </button>
-        </div> -->
-        <!-- Search form -->
-        <!-- <form> -->
-          <!-- <div class="row mb-4"> -->
-            <!-- <div class="form-group col-md-9"> -->
-          <!--     <input id="exampleFormControlInput5" type="email" placeholder="Search" class="form-control form-control-underlined" style="width: 200px;"> -->
-            <!-- </div> -->
-    <!--         <div class="form-group col-md-3"> -->
-              <!-- <button type="submit" class="btn btn-primary rounded-pill btn-block shadow-sm" style="width: 100px;">Search</button> -->
-            <!-- </div> -->
-          <!-- </div> -->
-
 	</div>
 
 
