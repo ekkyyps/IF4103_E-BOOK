@@ -1,9 +1,11 @@
 <div class="container mt-10">
     <div class="row mt-3">
-        <div class="col-md-6">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6" style="border-style: solid;box-shadow: 5px 5px 5px grey; background-color: white">
             <div class="card border-primary">
                 <div class="card-header">
-                    <h2>Edit Data Buku</h2>
+                    <h2 style="text-align: center">Edit Data Buku</h2>
                 </div>
                 <br>
                 <div class="card-body">
@@ -38,20 +40,25 @@
                                 <option value="biografi">biografi</option>
                                 <option value="cerpen">cerpen</option>
                             </select>
-                            <!-- <input type="text" name="jenis" class="form-control" id="jenis" placeholder="Jenis Buku"> -->w
+                            <!-- <input type="text" name="jenis" class="form-control" id="jenis" placeholder="Jenis Buku"> -->
                         </div>
                         <div class="form-group">
                             <label for="penulis">Isi</label>
-                            <input type="text" name="isi" class="form-control" id="isi" placeholder="Isi" style="height: 100px;">
+                            <!-- <input type="text" name="isi" class="form-control" id="isi" placeholder="Isi" style="height: 100px;"> -->
+                            <textarea rows="20" name="isi" class="form-control" id="isi" placeholder="<?php echo $data?>" value=""></textarea>
                         </div>
                         
                         <div class="col-md-3" style="float: left;">
-                            <a href="<?= base_url(); ?>index.php/Admin" class="btn btn-danger">Kembali</a>
+                            <a href="<?= base_url(); ?>index.php/Admin" class="btn btn-secondary" style="background-color: grey;color: white">Kembali</a>
                         </div>
-                        <button class="btn btn-primary float-right" type="submit" name="tambah">Tambah</button>
+                        <div class="col-md-3" style="float: right;">
+                            <button class="btn btn-primary float-right" type="submit" name="tambah">Tambah</button>
+                        </div>
+                        <br><br><br>
                     </form>
                 </div>
             </div>
-        </div>
+            </div><br>
     </div>
+    <br>
 </div>

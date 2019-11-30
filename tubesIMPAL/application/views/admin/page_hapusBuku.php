@@ -1,5 +1,28 @@
+<style type="text/css">
+    h3{
+        text-align: center;
+        font-family: Verdana;
+        font-weight: bold;
+
+      }
+  .table{
+    margin-top: 15px;
+    text-align: center;
+  }
+  thead{
+    background-color:#14868c;
+    padding-top: 10px;
+  }
+  th{
+    text-align: center;
+    background-color:#14868c;
+    color: white;
+  }
+</style>
+
+<h3>DAFTAR KARYA</h3>
 <div class="container">
-    <table class="table table-bordered" id="table">
+    <table class="table table-responsive" id="table">
         <thead>
             <tr>
                 <th>No</th>
@@ -28,7 +51,7 @@
         </tbody>
     </table>
     <div class="col-md-3">
-        <a href="<?= base_url(); ?>index.php/Admin" class="btn btn-danger">Kembali</a>
+        <a href="<?= base_url(); ?>index.php/Admin" class="btn btn-secondary" style="background-color: grey;color: white">Kembali</a>
     </div>
     
 </div>

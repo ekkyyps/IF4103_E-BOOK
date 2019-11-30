@@ -1,5 +1,36 @@
- <h1>Daftar Buku Penulis</h1>
- <table class="table table-bordered" id="table" >
+<style type="text/css">
+  h3{
+    text-align: center;
+    font-family: Verdana;
+    font-weight: bold;
+
+  }
+  .table{
+    margin-top: 15px;
+    text-align: center;
+  }
+  thead{
+    background-color:#14868c;
+    padding-top: 10px;
+  }
+  th{
+    text-align: center;
+    background-color:#14868c;
+    color: white;
+  }
+  .row{
+    margin-left: 7vw;
+  }
+  .container{
+
+  }
+  
+
+</style>
+
+<h3>DAFTAR KARYA PENULIS</h3>
+<div class="container">
+ <table class="table table-responsive" id="table" >
       <thead>
         <tr>
           <th>No</th>
@@ -7,7 +38,7 @@
           <th>Judul Buku</th>
           <th>Jenis</th>
           <th>Isi</th>
-          <th>COVER</th>
+          <th>Sampul</th>
           <th>Nama penulis</th>
           <th>Atur</th>
         </tr>
@@ -37,7 +68,7 @@
     </table>
 
 <div class="col-md-3" style="float: left;">
-  <a href="<?= base_url(); ?>index.php/Admin" class="btn btn-danger">Kembali</a>
+  <a href="<?= base_url(); ?>index.php/Admin" class="btn btn-secondary" style="background-color: grey;color: white">Kembali</a>
 </div>
 
 
@@ -72,7 +103,7 @@
               <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Jenis" name="jenis"  value="<?php echo $d->jenis?>" readonly>
             </div>
             <div class="form-group">
-              <label for="formGroupExampleInput">Cover</label>
+              <label for="formGroupExampleInput">Sampul</label>
               <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Cover" name="cover"  value="<?php echo $d->url?>" readonly>
             </div>
             <input type="hidden" class="form-control" id="formGroupExampleInput" placeholder="type" name="type"  value="" readonly>
@@ -91,6 +122,7 @@
     </div>
   </div>
 <?php } ?>
+</div>
 
 <script type="text/javascript">
     $(document).ready( function () {

@@ -41,13 +41,13 @@
       			<th>Penerbit</th>
       			<th>Penulis</th>
             <th>Jenis</th>
-            <th>COVER</th>
+            <th>Sampul</th>
             <th>Admin Pengunggah</th>
       		</tr>
       	</thead>
       	<tbody>
       		<?php $no=1; foreach ($data as $d ) {?>
-      		<tr>
+      		<tr class="clickable" onclick="window.location='<?php echo base_url('index.php/Admin/pageisibuku/'.$d->ISBN);?>'" href="" >
   	    		<form action="">
   		            <td><?php echo $no++ ?></td>
   		            <td><?php echo $d->ISBN ?></td>
